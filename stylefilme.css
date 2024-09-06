@@ -1,0 +1,200 @@
+/* RESET CSS */
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* FIM RESET CSS */
+header {
+    background-color: #5590B0;
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+}
+
+header .agrupamento {
+    margin-left: 150px;
+    margin-right: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header .agrupamento .logo {
+    width: 80px;
+}
+
+header .agrupamento .textos {
+    display: flex;
+    gap: 60px;
+    color: white;
+    align-items: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+header .agrupamento .textos p {
+    position: relative;
+    overflow: hidden;
+}
+
+header .agrupamento .textos p::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: white;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+header .agrupamento .textos p:hover::after {
+    transform: translateX(0);
+}
+
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloLogo{
+    display: flex;
+    margin-top: 130px;
+
+}
+
+.tituloPagina{
+    text-align: center;
+    margin-top: 50px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 60px;
+    color: #B21B16;
+}
+
+.logoFilmes{
+    width: 180px;
+    height: auto;
+    border: 0 0 10 3px solid black;
+}
+
+.infoFilmes{
+    margin-top: 80px;
+}
+
+h2{
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.texto {
+    text-align: justify; 
+    margin-right: 70px;
+}
+
+.capasFilmes{
+    width: 220px;
+    height: 330px;
+    margin: 80px;
+}
+
+.botao{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 70px;
+}
+
+#trailer {
+    margin-top: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 10px;
+    width: 160px;
+    height: 50px;
+    padding: 10px 20px;
+    background-color: #7E1717;
+    color: white; 
+    cursor: pointer; 
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 15px;
+}
+
+#trailer:hover{
+    background-color: black;
+    transition: 0.5s;
+}
+
+.iconeSoco {
+    width: 30px; /* Ajusta o tamanho do ícone */
+    height: auto; /* Mantém a proporção do ícone */
+}
+
+.filmes{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    font-family: "Bebas Neue", sans-serif;
+    background-color: #DEDEDE;
+    width: 950px;
+    height: 450px;
+    
+}
+
+.footer{
+    background-color: #5590B0;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding-left: 150px;
+    padding-right: 150px;
+    
+   
+    
+ }
+ .footer .esquerda .titulo{
+     font-family: "Bebas Neue", sans-serif;
+     margin-top: 10px;
+     font-size: 20px;
+     letter-spacing: 2px;
+ }
+ .footer .esquerda .texto{
+     margin-top: 20px    ;
+     font-family: "Kodchasan", sans-serif;
+     width: 400px;
+     text-align: justify;
+     margin-bottom: 20px;
+ }
+ 
+ .footer .direito{
+     display: flex;  
+     width: 400px;
+     justify-content: center;
+     gap: 50px;
+     align-items: center;
+ }
+ .footer i{
+     font-size: 30px;
+ }
+
+ .footer .img{
+   margin-top: 20px;
+ }
+ 

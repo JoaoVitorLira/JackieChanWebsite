@@ -1,0 +1,659 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: #5590B0;
+    padding: 5px;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+}
+
+header .agrupamento {
+    margin-left: 150px;
+    margin-right: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header .agrupamento .logo {
+    width: 80px;
+}
+
+header .agrupamento .textos {
+    display: flex;
+    gap: 60px;
+    color: white;
+    align-items: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-decoration: none;
+}
+header .agrupamento .textos a{
+    color: #fff;
+    text-decoration: none;
+}
+
+header .agrupamento .textos p {
+    position: relative;
+    overflow: hidden;
+}
+
+header .agrupamento .textos p::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: white;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+header .agrupamento .textos p:hover::after {
+    transform: translateX(0);
+}
+
+.container {
+    margin-left: 150px;
+    margin-right: 150px;
+    padding-top: 150px;
+}
+
+.container #introducao {
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+
+.container #introducao .jackie {
+    background-color: #B21B16;
+    border-radius: 20px;
+    width: 400px;
+    height: 400px;
+}
+
+.container #introducao .textos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.container #introducao .textos .texto1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 35px;
+}
+
+.container #introducao .textos .texto2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 95px;
+    color: #B21B16;
+    
+}
+
+.container #introducao .textos .texto3 {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    gap: 30px;
+   
+
+}
+
+.container .sobre {
+    background-color: #B21B16;
+    border-radius: 20px;
+    margin-top: 190px;
+    margin-bottom: 100px;
+}
+
+.container .sobre .completo {
+    display: flex;
+    color: #fff;
+}
+
+.container .sobre .completo img {
+    width: 400px;
+    border-radius: 20px;
+}
+
+.container .sobre .completo .textos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    margin: 50px;
+}
+
+.container .sobre .completo .textos .titulo {
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    font-size: 40px;
+}
+
+.container .sobre .completo .textos .texto {
+    text-align: justify;
+    font-family: "Kodchasan", sans-serif;
+    font-size: 18px;
+}
+
+/* Botão */
+.botao {
+    justify-content: flex-end;
+    display: flex;
+
+
+}
+
+.botao button {
+    cursor: pointer;
+    font-weight: 700;
+    font-family: Helvetica, "sans-serif";
+    transition: all .2s;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: #ffffff;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+
+}
+
+.botao button:hover {
+    background: #ffffff;
+}
+
+.botao button>svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform .3s ease-in-out;
+}
+
+.botao button:hover svg {
+    transform: translateX(5px);
+}
+
+.botao button:active {
+    transform: scale(0.95);
+}
+
+/*carrosel*/
+.cor {
+    background-color: #5590B0;
+}
+
+.carro {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    height: 100vh;
+    /* Define a altura do body para 100% da altura da viewport */
+    background-color: #DEDEDE;
+
+}
+
+.carro .carrossel {
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+
+}
+
+.carro .imagens {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carro .imagem {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carro .botao {
+    position: absolute;
+    /* Alterado para absolute para sobrepor à imagem */
+    top: 50%;
+    /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    /* Ajusta para centralizar perfeitamente */
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+    /* Garante que os botões fiquem acima da imagem */
+}
+
+.carro .botao-esquerda {
+    left: 10px;
+    /* Posiciona o botão à esquerda */
+}
+
+.carro .botao-direita {
+    right: 10px;
+}
+
+.confira {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+
+
+
+
+}
+
+.confira .diario {
+    background: linear-gradient(45deg, #5590B0, #40708A);
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px;
+    color: #fff;
+    padding: 30px;
+    width: 48%;
+    margin-left: 150px;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: left;
+}
+
+.confira .diario .esquerda img {
+    width: 50px;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.confira .diario .esquerda .titulo {
+    display: flex;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
+    
+}
+
+.confira .diario .esquerda .texto {
+    text-align: justify;
+    width: 70%;
+    font-family: "Kodchasan", sans-serif;
+    margin-top: 10px;
+    
+}
+
+.confira .diario .esquerda .subtitulo {
+    font-family: "Kodchasan", sans-serif;
+    margin-top: 10px;
+    font-size: 20px;
+    display: flex;
+   margin-left: -1px;
+    
+
+}
+
+.confira .diario .direita {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.loja .esquerda .botao {
+    display: flex;
+    margin-left: 25px;
+    justify-content: left;
+}
+
+.loja .esquerda .botao p {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.loja .esquerda .botao p:hover{
+    background-color: #B21B16;
+    transition: 0.5s;
+    color: #fff;
+
+}
+
+.confira .direita {
+    justify-content: flex-end;
+    display: flex;
+}
+
+.confira .direita button {
+    cursor: pointer;
+    font-weight: 700;
+    font-family: Helvetica, "sans-serif";
+    transition: all .2s;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: #ffffff;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.confira .direita button:hover {
+    background: #ffffff;
+}
+
+.confira .direita button>svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform .3s ease-in-out;
+}
+
+.confira .direita button:hover svg {
+    transform: translateX(5px);
+}
+
+.confira .direita button:active {
+    transform: scale(0.95);
+}
+
+.album {
+    background-color: #B21B16;
+    border-radius: 20px;
+    color: #fff;
+    padding: 50px;
+    width: 48%;
+    margin-right: 150px;
+    margin-left: 10px;
+}
+
+.album .titulo {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.album .titulo .t1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
+}
+
+.album .titulo .subtitulo {
+    font-family: "Kodchasan", sans-serif;
+    justify-content: center;
+}
+
+.album .fotos {
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+}
+
+.album .botao a {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+    font-family: "Kodchasan", sans-serif;
+    font-size: 18px;
+}
+
+.album .botao a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: white;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.album .botao a:hover::after {
+    transform: translateX(0);
+}
+
+.loja {
+    background-color: #B9D4E3;
+    margin-left: 150px;
+    margin-right: 150px;
+    border-radius: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.loja .esquerda .titulo, .subtitulo{
+    font-family: "Bebas Neue", sans-serif;
+    margin-left: 30px;
+    
+}
+.loja .esquerda .titulo{
+    font-size: 40px;
+}
+.loja .esquerda .subtitulo{
+    font-size: 35px;
+    margin-top: -10px;
+   
+}
+
+.loja .livros {
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.filmes, .videos {
+    border-radius: 20px;
+    width: 50%;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.filmes {
+    background-color: #B21B16;
+    margin-right: 20px;
+}
+
+.videos {
+    background-color: #5590B0;
+    display: flex;
+    flex-direction: column;
+}
+
+.iconeFilme{
+    width: 40px;
+    height: 40px;
+}
+
+/* Ajuste a flex-direction para alinhar o conteúdo da esquerda na vertical */
+.filmes .esquerda {
+    display: flex;
+    flex-direction: column; /* Muda para coluna */
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Mantém o título e o ícone na horizontal */
+.filmes .esquerda .titulos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row; /* Mantém o título e o ícone lado a lado */
+}
+
+.filmes .esquerda .titulo {
+    margin: 50px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 50px;
+    color: white;
+}
+
+/* Ícone da esquerda */
+.filmes .esquerda i {
+    font-size: 40px;
+    color: white;
+}
+
+.filmeLogo{
+  width: 20px;
+  height: auto;
+}
+
+/* Ajuste o botão para ficar no final da coluna */
+.filmes .botao {
+    width: 130px;
+    gap: 5px;
+    padding: 10px;
+    justify-content: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    margin: 30px;
+}
+
+.filmes .botao:hover{
+    background-color: #5590B0;
+    transition: 0.5s;
+}
+
+/* Imagem do Jackie */
+.filmes img.jackie, .videos .video {
+    border-radius: 20px;
+    width: 270px;
+    height: auto;
+}
+
+.cameraIcon{
+    width: 40px;
+    height: auto;
+}
+
+/* Estilo de vídeo */
+.videos .video {
+    background-image: url("imgs/tela.png"); /* Exibe a imagem como fundo */
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: 180px;
+    
+}
+
+.videos .cima{
+    margin-top: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    color: #fff;
+    font-size: 40px;
+}
+
+.videos .botaomais a{
+    margin: 20px;
+    color: #fff;
+    font-size: 20px;
+    font-family: "Kodchasan", sans-serif;
+    justify-content: end;
+    display: flex;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.videos .botaomais a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: white;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.videos .botaomais a:hover::after{
+    transform: translateX(0);
+}
+.nseimaisoqfazer {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 20px;
+}
+
+.carro{
+    flex-direction: column;
+}
+.carro .TITULO{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.footer{
+    background-color: #5590B0;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding-left: 150px;
+    padding-right: 150px;
+    
+   
+    
+ }
+ .footer .esquerda .titulo{
+     font-family: "Bebas Neue", sans-serif;
+     margin-top: 10px;
+     font-size: 20px;
+     letter-spacing: 2px;
+ }
+ .footer .esquerda .texto{
+     margin-top: 20px    ;
+     font-family: "Kodchasan", sans-serif;
+     width: 400px;
+     text-align: justify;
+     margin-bottom: 20px;
+ }
+ 
+ .footer .direito{
+     display: flex;  
+     width: 400px;
+     justify-content: center;
+     gap: 50px;
+     align-items: center;
+ }
+ .footer i{
+     font-size: 30px;
+ }
+
+ .footer .img{
+   margin-top: 20px;
+ }
